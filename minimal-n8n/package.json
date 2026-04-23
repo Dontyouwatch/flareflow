@@ -1,0 +1,13 @@
+{
+  "name": "minimal-n8n",
+  "version": "1.0.0",
+  "description": "Minimal n8n-like workflow automation using Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev worker/index.js",
+    "deploy": "wrangler deploy worker/index.js",
+    "pages:dev": "wrangler pages dev pages/src"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

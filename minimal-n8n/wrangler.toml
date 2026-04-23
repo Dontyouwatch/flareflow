@@ -1,0 +1,21 @@
+name = "minimal-n8n"
+main = "worker/index.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace for storing workflow state
+[[kv_namespaces]]
+binding = "WORKFLOW_STORE"
+id = "YOUR_KV_NAMESPACE_ID_HERE"  # Replace with actual ID after creating
+
+# Cron trigger for scheduled workflows
+[triggers]
+crons = ["* * * * *"]  # Every minute
+
+# Telegram configuration (replace with your credentials)
+[vars]
+TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+TELEGRAM_CHAT_ID = "YOUR_CHAT_ID_HERE"
+
+# Pages configuration
+[[pages_build_output_dir]]
+path = "pages/src"
